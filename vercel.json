@@ -5,6 +5,7 @@
     { "src": "indie-comments-widget/**", "use": "@vercel/static" }
   ],
   "routes": [
+    { "src": "/", "dest": "/landing/index.html" },
     { "src": "/(.*)", "dest": "/$1" }
   ]
 }
