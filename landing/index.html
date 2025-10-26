@@ -80,6 +80,27 @@
                 </indie-comments-widget>
             </div>
         </section>
+
+        <section id="install">
+            <hgroup>
+                <h2>Instalação Simples</h2>
+                <h3>Adicione duas linhas de código. É tudo.</h3>
+            </hgroup>
+            
+            <p>1. Inclua os arquivos minificados (CSS e JS) no seu HTML:</p>
+            <figure>
+                <pre><code><link rel="stylesheet" href="dist/widget.min.css">
+<script src="dist/widget.min.js"></script></code></pre>
+            </figure>
+
+            <p>2. Adicione o elemento Web Component onde deseja os comentários:</p>
+            <figure>
+                <pre><code><indie-comments-widget
+    thread-id="sua-pagina-unica-id"
+    api-base-url="https://seu-proxy.com/api">
+</indie-comments-widget></code></pre>
+            </figure>
+        </section>
         
     </main>
     
