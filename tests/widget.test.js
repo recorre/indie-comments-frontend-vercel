@@ -9,6 +9,8 @@ describe('IndieCommentsWidget', () => {
     fetch.mockClear();
     // Create a new widget instance
     widget = new IndieCommentsWidget();
+    // Mock render to prevent DOM issues
+    widget.render = jest.fn();
   });
 
   afterEach(() => {

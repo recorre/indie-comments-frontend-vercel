@@ -16,7 +16,7 @@ global.HTMLElement = class MockHTMLElement {
       innerHTML: '',
       appendChild: jest.fn(),
       querySelector: jest.fn(),
-      getElementById: jest.fn()
+      getElementById: jest.fn(() => ({ value: '', addEventListener: jest.fn(), textContent: '', className: '' }))
     };
     this.attachShadow = jest.fn(() => this.shadow);
     this.getAttribute = jest.fn();
