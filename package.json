@@ -1,0 +1,37 @@
+{
+  "name": "indie-comments-frontend",
+  "version": "1.0.0",
+  "description": "A lightweight, embeddable comment system frontend",
+  "main": "indie-comments-widget/widget.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "build": "npm run minify:js && npm run minify:css",
+    "minify:js": "terser indie-comments-widget/widget.js -o indie-comments-widget/widget.min.js --compress --mangle",
+    "minify:css": "cleancss -o indie-comments-widget/css/widget.min.css indie-comments-widget/css/widget.css",
+    "e2e": "cypress open",
+    "e2e:run": "cypress run",
+    "lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html",
+    "serve": "npx serve ."
+  },
+  "devDependencies": {
+    "@sentry/browser": "^10.22.0",
+    "clean-css-cli": "^5.6.3",
+    "cypress": "^13.6.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "lighthouse": "^11.4.0",
+    "serve": "^14.2.1",
+    "terser": "^5.19.0",
+    "web-vitals": "^5.1.0"
+  },
+  "keywords": [
+    "comments",
+    "widget",
+    "frontend",
+    "vanilla-js"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

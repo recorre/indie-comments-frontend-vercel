@@ -561,3 +561,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const widgets = document.querySelectorAll('indie-comments-widget');
     console.log('Found', widgets.length, 'indie-comments-widget elements');
 });
+
+// Register Service Worker for PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+        console.log('SW registered: ', registration);
+      })
+      .catch((registrationError) => {
+        console.log('SW registration failed: ', registrationError);
+      });
+  });
+}
+
+// Export for testing
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { IndieCommentsWidget };
+}
