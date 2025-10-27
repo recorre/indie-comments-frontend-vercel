@@ -12,7 +12,7 @@
     "minify:css": "cleancss -o indie-comments-widget/css/widget.min.css indie-comments-widget/css/widget.css",
     "e2e": "cypress open",
     "e2e:run": "cypress run",
-    "lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html",
+    "lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html --chrome-flags=\"--headless\"",
     "serve": "npx serve ."
   },
   "devDependencies": {
